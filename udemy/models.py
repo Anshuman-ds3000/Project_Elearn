@@ -10,3 +10,5 @@ class Enroll(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='enrolls')
     created_at = models.DateTimeField(default=now)
     updated_at = models.DateTimeField(default=now)
+    def __str__(self):
+        return f'{self.user.username} enrolled in {self.course.title}'

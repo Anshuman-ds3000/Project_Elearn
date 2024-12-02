@@ -35,7 +35,7 @@
                                                 <div class="course-name">{{ course.title }}</div>
                                                 {#                                                <div class="instructor-name">first_name last_name</div>#}
                                                 <div class="item-price">
-                                                    <span class="current-price">${{ course.price }}</span>
+                                                    <span class="current-price">₹{{ course.price }}</span>
                                                     {#                                    {{ --<span class="original-price">$300</span>--}}#}
                                                 </div>
                                             </a>
@@ -54,7 +54,7 @@
             <div class="cart-total-price clearfix">
                 <span>Total:</span>
                 <div class="float-right">
-                    <span class="current-price">${{ cart.get_total_price }}</span>
+                    <span class="current-price">₹{{ cart.get_total_price }}</span>
                 </div>
             </div>
             <a href="{% url 'cart:cart_detail' %}">Go to cart</a>
